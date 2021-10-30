@@ -23,6 +23,7 @@ class planet {
     tag="";
   }
   void drawPlanet() {
+
     if (distance > 0) {
       x = this.distance * cos(time / this.speed);
       y = this.distance * sin(time / this.speed);
@@ -30,6 +31,7 @@ class planet {
     pushMatrix();
 
     translate(x, y);
+
     lights();
     if (tag != "sun") {
       noLights();
@@ -45,15 +47,21 @@ class planet {
     }
 
     popMatrix();
+    for (planet moon : this.moons) {
+      moon.drawPath(x,y);
+    }
 
-    //pushMatrix();
-    //noFill();
-    //stroke(255,30);
-    ////translate(width/2, height/2);
-    ////ellipse(0, 0, distance*2, distance*2);
-    //popMatrix();
     if (rings!=null) {
       rings.drawRings(x,y);
     }
+  }
+  void drawPath(float x, float y){
+      pushMatrix();
+      translate(x, y);
+      noFill();
+      stroke(255);
+      circle(0,0,distance *2);
+      popMatrix();
+  
   }
 }
