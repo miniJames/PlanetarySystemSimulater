@@ -6,11 +6,15 @@ class planetarySystem {
     
   }
   planetarySystem() {
- 
-  }
 
+    
+  }
   void drawSystem() {
     main.drawPlanet();
+    for(planet p: main.moons){
+      p.drawPath( main.x,  main.y);
+    
+    }
     //for (planet p : main.moons) {
     //  p.drawPlanet() ;
     //}

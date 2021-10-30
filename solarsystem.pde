@@ -13,8 +13,8 @@ void setup() {
   cam.setMaximumDistance(100000);
   background(0);
   //solarSystem();
-  //randomSystem();
-  centralEarthSolarSystem();
+  randomSystem();
+  //centralEarthSolarSystem();
   
 }
 //void keyPressed(){
@@ -37,7 +37,7 @@ void draw() {
   ps.drawSystem();
   popMatrix();
   if(record){
-    saveFrame("d:\\Documents\\planets\\solarsystem\\solarsystemfromearthsperspective\\solarSystem-######.tif");
+    saveFrame("solarSystem-######.tif");
   }
 }
 
