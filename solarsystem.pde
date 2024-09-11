@@ -12,8 +12,8 @@ void setup() {
   cam.setMinimumDistance(0);
   cam.setMaximumDistance(100000);
   background(0);
-  //solarSystem();
-  randomSystem();
+  solarSystem();
+  //randomSystem();
   //centralEarthSolarSystem();
   
 }
